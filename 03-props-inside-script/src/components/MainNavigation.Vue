@@ -1,10 +1,22 @@
 <!-- pascal case -->
-<script setup></script>
+<script setup>
+    const props = defineProps({
+        title: {
+            type: String,
+            required: true,
+            default: 'Default Title'
+        }
+    })
+
+    function alertTitle() {
+        alert(`The title is: ${props.title}`);
+    }
+</script>
 
 <template>
     <nav class="main-navigation">
         <ul>
-            <li><a href="/">Vue app</a></li>
+            <li><a href="/" @click="alertTitle">{{title }}</a></li>
             <li><a href="https://vuejs.org">Vue.js</a></li>
         </ul>
     </nav>

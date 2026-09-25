@@ -1,10 +1,18 @@
 <!-- pascal case -->
-<script setup></script>
+<script setup>
+    defineProps({
+        title: {
+            type: String,
+            required: true,
+            default: 'Default Title'
+        }
+    })
+</script>
 
 <template>
     <nav class="main-navigation">
         <ul>
-            <li><a href="/">Vue app</a></li>
+            <li><a href="/">{{ title }}</a></li>
             <li><a href="https://vuejs.org">Vue.js</a></li>
         </ul>
     </nav>
