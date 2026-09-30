@@ -1,9 +1,13 @@
 <script setup>
+import { ref } from 'vue';
+
     defineEmits(['on-input']);
+
+    const name = ref(''); 
 </script>
 
 <template>
-    <input type="text" placeholder="Type something..." @click="$emit('on-input')" />
+    <input  v-model="name" type="text" placeholder="Type something..." @input="$emit('on-input', name)" />
 
 </template>
 

@@ -12,8 +12,8 @@ setTimeout(() => {
     title.value = 'REACT';
 }, 3000);
 
-function handleInputClick() {
-    console.log('Input field clicked!');
+function logMessage(name) {
+    console.log('Input field changed!', name);
 }
 </script>
 
@@ -25,7 +25,7 @@ function handleInputClick() {
     </header>
     <main>
         <SiteContent />
-        <InputField @on-input="handleInputClick" />
+        <InputField @on-input="logMessage" />
     </main>
     <footer>
         <!-- sitefooter komponens hasznalata -->
